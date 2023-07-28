@@ -1,1 +1,9 @@
-<p>dashboard works!</p>
+<app-nav></app-nav>
+
+<p *ngIf="!userLoginOn">User not logged in</p>
+<p *ngIf="userLoginOn">User is logged in</p>
+<div *ngIf="userLoginOn">
+  <p>Name: {{ userData?.name }}</p>
+  <p>Lastname: {{ userData?.lastName }}</p>
+  <p>Lastname: {{ userData?.email }}</p>
+</div>
